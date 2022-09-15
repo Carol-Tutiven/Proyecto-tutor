@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Redes Bayesianas</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="RedesBayesianas">Definición</a></li>
+        <li><a href="#slider">Historia</a></li>
+        <li><a href="InferenciaAprendizaje">Inferencia de aprendizaje</a></li>        
+        <li><a href="ClasificadoresBayesianos">Clasificadores Bayesianos</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2>HISTORIA</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <p>
+                El término "redes bayesianas" fue acuñado por Judea Pearl en
+                1985 para hacer hincapié en tres aspectos:
+                <ol start="1">
+                    <li class="list-Redes">
+                        El carácter a
+                        menudo subjetivo de la información de entrada.
+                    </li>
+                    <li class="list-Redes">
+                        La dependencia de
+                        acondicionamiento de Bayes como base para la actualización de la
+                        información.
+                    </li>
+                    <li class="list-Redes">
+                        La distinción entre los modos causales y probatorio
+                        de razonamiento, lo que subraya Thomas Bayes en un documento
+                        publicado póstumamente en 1763.
+                    </li>
+                  </ol>  
+                
+              </p>
+              <p>
+                A finales de 1980 los textos
+                seminales Razonamiento Probabilístico en Sistemas
+                Inteligentes y Razonamiento Probabilístico en Sistemas
+                Expertos​ resume las propiedades de las redes Bayesianas y
+                ayudó a establecer las mismas como un campo de estudio.              
+              </p>
+              <p>
+                Variantes informales de este tipo de redes se utilizaron por
+                primera vez por el jurista John Henry Wigmore, en forma de
+                grafos de Wigmore, para analizar la evidencia en un juicio en
+                1913.
+              </p>
+              <p>
+                Otra variante, llamada diagrama de rutas, fue
+                desarrollada por el genetista Sewall Wright​ y utilizado en
+                ciencias de la conducta y sociales (en su mayoría con modelos
+                paramétricos lineales).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  {% endblock%}
+</main>

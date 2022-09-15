@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Redes Bayesianas</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="#slider">Definición</a></li>
+        <li><a href="Historia">Historia</a></li>
+        <li><a href="InferenciaAprendizaje">Inferencia de aprendizaje</a></li>
+        <li>
+          <a href="ClasificadoresBayesianos">Clasificadores Bayesianos</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2>REDES BAYESIANAS</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <p>
+                Las redes bayesianas proporcionan una representación gráfica
+                para un conjunto de variables aleatorias y para las relaciones
+                existentes entre ellas. La estructura de la red permite
+                especificar la función de probabilidad conjunta de estas
+                variables como el producto de funciones de probabilidad
+                condicionadas, por lo general, más sencillas.
+              </p>
+              <p>
+                Este enfoque representa una buena estrategia para hacer frente a
+                problemas relacionados con la incertidumbre, donde las
+                conclusiones no pueden ser construidas sólo a partir de un
+                conocimiento previo sobre el problema. Inicialmente, estos
+                modelos eran construidos "a mano" basados en un conocimiento
+                experto, pero en los últimos años se han desarrollado diversas
+                técnicas para aprender a partir de datos, tanto la estructura
+                como los parámetros asociados al modelo.
+              </p>
+              <p>
+                Las redes bayesianas se encuentran entre los modelos gráficos
+                más populares. La principal diferencia, con respecto a otros
+                modelos, está en que sus arcos son dirigidos y representan
+                dependencia condicional entre las variables. El nombre proviene
+                del hecho que gran parte de la teoría relevante con este tipo de
+                redes se basa en la estadística bayesiana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- <div id="menuSlide">
+      <a href="#">1</a>
+      <a href="motos.html">2</a>
+      <a href="computadoras.html">3</a>
+      <a href="cocinas.html">4</a>
+      <a href="televisores.html">5</a>
+      <a href="impresoras.html">6</a>
+    </div> -->
+  </section>
+</main>
+
+{% endblock%}

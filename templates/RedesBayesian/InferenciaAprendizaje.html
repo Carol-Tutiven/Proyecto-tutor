@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Redes Bayesianas</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="RedesBayesianas">Definición</a></li>
+        <li><a href="Historia">Historia</a></li>
+        <li><a href="#slider">Inferencia de aprendizaje</a></li>
+        <li>
+          <a href="ClasificadoresBayesianos">Clasificadores Bayesianos</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2>Inferencia de aprendizaje</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <h1>Deducción de variables no observadas</h1>
+              <p>
+                Debido a que una red bayesiana es un modelo completo de las
+                variables y sus relaciones, se puede utilizar para responder a
+                las consultas de probabilidad acerca de ellos. Por ejemplo, la
+                red se puede utilizar para averiguar el conocimiento actualizado
+                del estado de un subconjunto de variables cuando otras variables
+                (las variables de evidencia) se observan. Este proceso de
+                cálculo de la distribución posterior de las variables dada la
+                evidencia que se llama inferencia probabilística.
+              </p>
+              <p>
+                La posterior da un suficiente estadístico universal para
+                aplicaciones de detección, cuando se quiere elegir los valores
+                para la variable de un subconjunto que minimizan alguna función
+                de pérdida esperada, por ejemplo, la probabilidad de error de
+                decisión. Una red bayesiana de esta manera, puede considerarse
+                como un mecanismo para aplicar automáticamente el teorema de
+                Bayes a problemas complejos.
+              </p>
+              <p>
+                Los métodos más comunes de inferencia exactas son: eliminación
+                de variables, el cual elimina (mediante integración o suma) las
+                variables no observadas y no consultadas una por una mediante la
+                distribución de la suma sobre el producto; propagación en un
+                árbol clique, que almacena en caché el cálculo de modo que
+                muchas variables se pueden consultar en una vez y nueva
+                evidencia se puede propagar rápidamente; y condicionamiento
+                recursivo y búsqueda AND/OR, que permiten un equilibrio
+                espacio-tiempo y realiza eficientemente la eliminación de
+                variables cuando se usa suficiente espacio.
+              </p>
+              <p>
+                Todos estos métodos tienen una complejidad que es exponencial
+                con respecto al ancho del árbol. <br />
+                Los algoritmos de inferencia aproximada más comunes son muestreo
+                de importancia, simulación estocástica MCMC (Markov Chain Monte
+                Carlo), eliminación mini-cubo, LBP (Loopy Belief Propagation),
+                GBP (Generalized Belief Propagation), y los métodos
+                variacionales.
+              </p>
+              <h1>Aprendizaje de Parámetros</h1>
+              <p>
+                Para especificar completamente la red bayesiana y por lo tanto
+                representar plenamente a la distribución de probabilidad
+                conjunta , es necesario especificar para cada nodo X la
+                distribución de probabilidad de X condicionada dado sus padres.
+                La distribución de X condicionada dado sus padres puede tener
+                cualquier forma. Es común trabajar con distribuciones discretas
+                o gaussianas ya que simplifica los cálculos. A veces sólo
+                restricciones sobre una distribución son conocidas; uno puede
+                entonces utilizar el principio de máxima entropía para
+                determinar una distribución única. A menudo, estas
+                distribuciones condicionales incluyen parámetros que son
+                desconocidos y deben estimarse a partir de los datos, a veces
+                utilizando el enfoque de máxima probabilidad.
+              </p>
+              <p>
+                La maximización directa de la probabilidad (o de la probabilidad
+                posterior) es a menudo compleja cuando hay variables no
+                observadas. Un método clásico de este problema es el algoritmo
+                de expectación-maximización el cual alterna los valores
+                esperados computados de las variables condicionales no
+                observadas a datos observados, con la maximización de la
+                probabilidad total (o posterior) suponiendo que previamente
+                calculados los valores esperados son correctas. Bajo condiciones
+                de regularidad leves este proceso converge en valores de
+                probabilidad máxima (o máximo posterior) para los parámetros. Un
+                enfoque más Bayesiano es tratar a los parámetros como variables
+                no observadas adicionales y para calcular la distribución
+                posterior completa sobre todos los nodos condicionales de los
+                datos observados, después, integrar los parámetros. Este enfoque
+                puede ser costoso y llevar a modelos de grandes dimensiones, por
+                lo que en la práctica enfoques de ajuste de parámetros clásicos
+                son más comunes.
+              </p>
+
+              <p></p>
+              <h1>Aprendizaje de Estructuras</h1>
+              <p>
+                En el caso más simple, una red bayesiana se especifica por un
+                experto y se utiliza entonces para realizar inferencia. En otras
+                aplicaciones, la tarea de definir la red es demasiado compleja
+                para los seres humanos. En este caso la estructura de la red y
+                los parámetros de las distribuciones locales debe ser aprendido
+                de datos. El aprendizaje automático de la estructura gráfica de
+                una red bayesiana es un reto dentro del aprendizaje de máquina.
+                La idea básica se remonta a un algoritmo de recuperación
+                desarrollado por Rebane y Pearl (1987)4​ y se basa en la
+                distinción entre los tres tipos posibles de triplos adyacentes
+                permitidos en un gráfico acíclico dirigido (DAG):
+              </p>
+              <ol start="1">
+                <li class="list-Redes">
+                  <img
+                    src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff5d092fb7193163f784b507c54b1c5781b2f453"
+                  />
+                </li>
+                <li class="list-Redes">
+                  <img
+                    src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5d91a1d581c41a11fefca970fd25ab2419a920f4"
+                  />
+                </li>
+                <li class="list-Redes">
+                  <img
+                    src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9b2c03efa1e7830a331531aca3e5b89a0fd9b763"
+                  />
+                </li>
+              </ol>
+              <p>
+                Tipo 1 y tipo 2 representan las mismas dependencias (X y Z son
+                independientes dada Y) y son, por tanto, indistinguibles. Tipo
+                3, sin embargo, puede ser identificado de forma única, ya que X
+                y Z son marginalmente independientes y todos los otros pares son
+                dependientes. Así, mientras que los esqueletos (los grafos
+                despojados de flechas) de estos tres triplos son idénticos, la
+                direccionalidad de las flechas es parcialmente identificable. La
+                misma distinción se aplica cuando X y Z tienen padres comunes,
+                excepto que uno debe condicionar primero en esos padres. Se han
+                desarrollado algoritmos para determinar sistemáticamente el
+                esqueleto del grafo subyacente y, a continuación, orientar todas
+                las flechas cuya direccionalidad está dictada por las
+                independencias condicionales observados.1​5​6​7​ Un método
+                alternativo de aprendizaje estructural utiliza la optimización
+                basada en búsquedas.
+              </p>
+              <p>
+                Se requiere una función de puntuación y una estrategia de
+                búsqueda. Una función de puntuación común es la probabilidad
+                posterior de la estructura dado los datos de entrenamiento. El
+                requisito de tiempo de una búsqueda exhaustiva retornando una
+                estructura que maximice la puntuación es superexponencial en el
+                número de variables. Una estrategia de búsqueda local hace
+                cambios incrementales destinados a mejorar la puntuación de la
+                estructura. Un algoritmo de búsqueda global como la cadena de
+                Markov Monte Carlo puede evitar quedar atrapado en mínimos
+                locales. Friedman et al.8​9​ habla acerca del uso de la
+                información mutua entre las variables y encontrar una estructura
+                que maximiza esto. Lo hacen mediante la restricción del conjunto
+                de padres candidatos a k nodos y exhaustivamente buscan en el
+                mismo.
+              </p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  {% endblock%}
+</main>
