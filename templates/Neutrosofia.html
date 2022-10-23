@@ -2,22 +2,29 @@
 {% extends "layout.html" %} {% block content %}
 <main class="main">
   <!-- ASIDE DE CATALOGO -->
-  <div id="categoria">
-    <h1>Neutrosofia</h1>
-    <div id="recuadro2"></div>
-    <ul>
-      <li><a href="#slider">Definión</a></li>
-      <li><a href="NeutrosofiaHistoria">Historia</a></li>
-      <li><a href="LogicaNeutrosofica">Lógica Neutrosófica</a></li>
-      <li><a href="cocinas.html">Cocinas</a></li>
-      <li><a href="televisores.html">Televisores</a></li>
-      <li><a href="impresoras.html">Impresoras</a></li>
-    </ul>
-  </div>
+  <aside clas>
+    <div id="categoria">
+      <h1>Neutrosofia</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="Neutrosofia">Definión</a></li>
+        <li><a href="NeutrosofiaHistoria">Historia</a></li>
+        <li><a href="LogicaNeutrosofica">Lógica Neutrosófica</a></li>
+        <li><a href="ConjuntoNeutrosofico">Conjunto Neutrosófico</a></li>
+        <li><a href="probabilidadNeutrosofica">Probabilidad Neutrosófica</a></li>
+        <li><a href="estadisticasNeutrosofica">Estadística Neutrosófica</a></li>
+        <li>
+          <a href="CaracteristicaNeutrosofia"
+            >Características del razonamiento de la Neutrosofía</a
+          >
+        </li>
+      </ul>
+    </div>
+  </aside>
 
   <section id="articulosprincipales">
     <article id="compra">
-      <h2>NEUTROSOFIA</h2>
+      <h2 class="title-neutrosofia">NEUTROSOFÍA</h2>
       <div id="recuadro3"></div>
     </article>
 
@@ -27,7 +34,7 @@
           <div class="recuadro">
             <img src="imagenes/productos/celulares/A12.jpg" alt="" />
             <div class="infoProducto">
-              <p>
+              <p class="parrafo-text">
                 La Neutrosofía es una de las ramas de la filosofía que está en
                 las diferentes materias como es matemática, física, etc., para
                 coger esas ideas vagas al escoger una de ellas tener una mejor
@@ -39,30 +46,27 @@
               </p>
               <img
                 src="/static/imagenes/neutrosofia.png"
-                width="242px"
-                height="110px"
+                width="370px;"
+                height="300px;"
+                style="
+                  margin-left: 271px;
+                  margin-top: 30px;
+                  margin-bottom: 30px;
+                "
               />
-              <p>
+              <p class="parrafo-text">
                 Que comenzaron a expandirse nuevas vías de investigaciones en el
-                campo como lo es: filosofía, lógica, teoría de conjuntos,
-                probabilidad y estadística la teoría Neutrosófica aplicada en
-                diferentes campos para resolver problemas relacionados con la
-                indeterminación.
+                campo como lo es:
+                <br />
+                filosofía, lógica, teoría de conjuntos, probabilidad y
+                estadística la teoría Neutrosófica aplicada en diferentes campos
+                para resolver problemas relacionados con la indeterminación.
               </p>
             </div>
           </div>
         </div>
       </div>
     </article>
-
-    <!-- <div id="menuSlide">
-        <a href="#">1</a>
-        <a href="motos.html">2</a>
-        <a href="computadoras.html">3</a>
-        <a href="cocinas.html">4</a>
-        <a href="televisores.html">5</a>
-        <a href="impresoras.html">6</a>
-      </div> -->
   </section>
 </main>
 

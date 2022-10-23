@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Lógica Difusa</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="LogicaDifusa">Lógica Difusa</a></li>
+        <li><a href="historiaLogica">Historia</a></li>
+        <li><a href="Importancia">Funcionalidad</a></li>
+        <li><a href="aplicaciones">Aplicaciones</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2 class="title-neutrosofia">HISTORIA DE LA LÓGICA DÍFUSA</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <h1 class="title-neutrosofia">¿Cómo surge la Fuzzy Logic?</h1>
+              <p class="parrafo-text">
+                La Fuzzy Logic nació de la mano de Lofti A. Zadeh, un iraní de
+                nacionalidad americana, matemático y catedrático de la
+                Universidad de Berkeley de California. El autor sintió la
+                necesidad de aportar en el campo de la matemática una nueva
+                lógica multievaluada.
+              </p>
+
+              <p class="parrafo-text">
+                Esto significa que va más allá de la lógica booleana. Zadeh
+                presentó la fuzzy logic como una forma de procesamiento de la
+                información en la que los datos podrían tener asociados un grado
+                de pertenencia parcial a conjuntos. Hacia 1970 se empezó a
+                aplicar esta teoría en los sistemas de control y, desde
+                entonces, el número de aplicaciones industriales y su ejecución
+                ha aumentado exponencialmente.
+              </p>
+              <p class="parrafo-text">
+                Mediante esta lógica el autor quería facilitar la expresión
+                mediante las etiquetas del lenguaje natural y poder acercarnos
+                más a ese tratamiento natural del lenguaje a la hora de intentar
+                cualificar y cuantificar dentro de lo que es el desarrollo de
+                sistemas de información.
+              </p>
+              <img
+                src="/static/imagenes/Lofti.jpg"
+                width=370px;
+                height=300px;
+                style=" margin-left: 230px; border-radius: 48px ; margin-top: 30px;"               
+              />
+
+              <p class="parrafo-text"></p>
+              <p class="parrafo-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  {% endblock%}
+</main>

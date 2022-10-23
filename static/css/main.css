@@ -8,12 +8,17 @@
 .content-navegation {
 }
 .bg-dark {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
   display: block;
 }
 .bg-dark-botton {
-  background-color: #02101f !important;
+  background-color: #12074e !important;
   display: block;
+}
+.bg-dark-preg {
+  background-color: #f8f9fa !important;
+  display: block;
+  margin-bottom: 0%;
 }
 .navbar-brand-text {
   color: #01060a;
@@ -23,6 +28,10 @@
   font-family: auto;
   font-weight: 800;
   align-self: center;
+}
+.navbar-brand-text:hover {
+  color: #e11010;
+  text-decoration: none;
 }
 .navegation {
   display: flex;
@@ -38,7 +47,87 @@
 .navbar-collapse {
   justify-content: center;
 }
+.navbar-collapse-preg {
+  display: flex !important;
+  justify-content: center !important;
+}
+.nav-item-preg {
+  padding: 27px 0% 27px 0%;
+}
+.nav-link-preg {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  background: #030506;
+  border-radius: 11px;
+  color: #f9f6f6 !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-link-preg:hover {
+  background: cornflowerblue;
+  border-radius: 11px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navigation-link-preg:active {
+  color: #e9ecef !important;
+  font-weight: bold;
+}
 
+/* Neutrosofia */
+.title-neutrosofia {
+  font-size: 24px;
+  text-align: center;
+  font-family: initial;
+  font-weight: 600;
+}
+.parrafo-text {
+  text-align: justify;
+}
+/* Preguntas frecuentes */
+.text-frecuente-title {
+  font-family: emoji;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.text-frecuente {
+  font-family: emoji;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* paneles de preguntas frecuentes */
+.panel-group {
+  margin-bottom: 20px;
+  width: 77%;
+  margin-left: 66px;
+  margin-top: 20px;
+}
+.panel {
+  margin-bottom: 13px !important;
+}
+.panel-body {
+  font-size: 16px;
+  font-family: inherit;
+}
+.title-collapse {
+  font-size: 18px;
+}
+.title-collapse:hover {
+  color: #1a579a !important;
+  text-decoration: none;
+}
 /* texto principal */
 
 .ps-principal-title {
@@ -54,9 +143,15 @@
 }
 
 .jumbotron {
+  width: 101%;
+  margin-left: 7px;
+  background-color: #fff;
+}
+.jumbotron-acerca {
   width: 78%;
   margin-left: 181px;
 }
+
 .ps-secundary-title {
   font-size: 23px;
   padding: 12px;
@@ -80,7 +175,7 @@
   width: 350px;
   margin-top: 10px;
   padding: 20px;
-  background-color: #212326;
+  background-color: #12074e;
   border-radius: 10px;
 }
 #categoria #recuadro2 {
@@ -127,16 +222,17 @@ li {
 
 /* PIE DE PAGINA */
 #piePagina {
-  background: #212326;
+  background: #12074e;
   width: 100%;
   height: 100%;
   font-size: 13px;
   position: relative;
 }
 .text-footer {
-  color: #f8f9fa;
+  color: #ffffff;
   font-family: initial;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .container-text-footer {
@@ -160,12 +256,15 @@ li {
 }
 
 .footer-title {
-  color: #f8f9fa;
+  color: #ffffff;
   font-family: initial;
   font-size: 23px;
+  font-weight: 600;
 }
 .footer-title:hover {
-  color: #0070ff;
+  color: #ffffff;
+  font-size: larger;
+  text-decoration: none;
 }
 /* section y article */
 #articulosprincipales {
@@ -190,7 +289,7 @@ li {
 }
 
 .content-initial-2 {
-  background-image: url(https://www.emprendepyme.net/wp-content/uploads/2021/11/desafios-inteligencia-artificial-empresas.jpg);
+  /* background-image: url(https://www.emprendepyme.net/wp-content/uploads/2021/11/desafios-inteligencia-artificial-empresas.jpg); */
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
@@ -198,42 +297,46 @@ li {
 
 /* content contact */
 .content-contact {
-  background: black;
+  /* background: black; */
 }
 .img-contact {
   height: 460px;
 }
 .img-contact-redes {
-  width: 2% !important;
+  width: 9% !important;
+  border-radius: 11px;
 }
 .content-contact-redes {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
   align-content: center;
   align-items: center;
+  width: 100%;
 }
 .text-contact-redes {
-  color: white;
+  color: rgb(0, 0, 0);
   padding-left: 20px;
   align-self: center;
-  padding-bottom: 34px;
+}
+.text-contact-redes:hover {
+  text-decoration: none;
 }
 .content-map {
   width: 100%;
   padding: 0 51px;
 }
 .direccion-contact {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-weight: 800;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 /* Title info */
 .title-info {
   font-family: emoji;
   font-size: 27px;
-  padding: 24px;
+  padding: 18px;
   text-align: center;
   font-weight: bold;
 }
@@ -241,22 +344,50 @@ li {
 /* Title contacto */
 .text-contact {
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: fangsong;
 }
 
+.Contactanos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 26px 0 40px;
+}
 /* button */
 .btn-dark {
   border-radius: 12px 141px 13px;
   width: 17%;
   align-self: center;
   height: 44px;
+  color: rgb(255 255 255);
+  background-color: #12074e !important;
+  border-color: #343a40;
+  font-weight: 600;
+}
+.btn-dark-preg {
+  border-radius: 12px 141px 13px;
+  width: 17%;
+  align-self: center;
+  height: 44px;
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+  line-height: 26px;
+}
+.btn-dark-preg:hover {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
 }
 
 .noticias {
   z-index: 9999;
-  position: relative;
-  padding: 0 25px;
+  position: relative;  
+  padding: 0 25px 46px 25px;
 }
 .tab1 {
   text-align: left;
@@ -289,6 +420,14 @@ li {
   text-align: left;
   height: 50px;
   cursor: pointer;
+  color: #1a579a;
+}
+.title-home {
+  color: #2f4774;
+}
+.title-home:hover {
+  color: #1a579a;
+  text-decoration: none;
 }
 
 .description {

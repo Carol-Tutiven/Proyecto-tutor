@@ -67,6 +67,34 @@ def NeutrosofiaHistoria_test():
 def LogicaNeutrosofica_test():
     return "LogicaNeutrosofica Page"
 
+@app.route('/test/CaracteristicaNeutrosofia/')
+def CaracteristicaNeutrosofia_test():
+    return "CaracteristicaNeutrosofia Page"
+
+@app.route('/test/historiaLogica/')
+def historiaLogica_test():
+    return "historiaLogica Page"
+
+@app.route('/test/Importancia/')
+def Importancia_test():
+    return "Importancia Page"
+
+@app.route('/test/aplicaciones/')
+def aplicaciones_test():
+    return "aplicaciones Page"
+
+
+@app.route('/test/ConjuntoNeutrosofico/')
+def ConjuntoNeutrosofico_test():
+    return "ConjuntoNeutrosofico Page"
+
+@app.route('/test/probabilidadNeutrosofica/')
+def probabilidadNeutrosofica_test():
+    return "probabilidadNeutrosofica Page"
+
+@app.route('/test/estadisticasNeutrosofica/')
+def estadisticasNeutrosofica_test():
+    return "estadisticasNeutrosofica Page"
 
 # Routes to Render Something
 @app.route('/')
@@ -131,6 +159,34 @@ def NeutrosofiaHistoria():
 @app.route('/LogicaNeutrosofica', strict_slashes=False)
 def LogicaNeutrosofica():
     return render_template("/Neutrosofia/LogicaNeutrosofica.html")
+
+@app.route('/CaracteristicaNeutrosofia', strict_slashes=False)
+def CaracteristicaNeutrosofia():
+    return render_template("/Neutrosofia/CaracteristicaNeutrosofia.html")
+
+@app.route('/historiaLogica', strict_slashes=False)
+def historiaLogica():
+    return render_template("/LogicaDifusa/historiaLogica.html")
+
+@app.route('/Importancia', strict_slashes=False)
+def Importancia():
+    return render_template("/LogicaDifusa/Importancia.html")
+
+@app.route('/aplicaciones', strict_slashes=False)
+def aplicaciones():
+    return render_template("/LogicaDifusa/aplicaciones.html")
+
+@app.route('/ConjuntoNeutrosofico', strict_slashes=False)
+def ConjuntoNeutrosofico():
+    return render_template("/Neutrosofia/ConjuntoNeutrosofico.html")
+
+@app.route('/probabilidadNeutrosofica', strict_slashes=False)
+def probabilidadNeutrosofica():
+    return render_template("/Neutrosofia/probabilidadNeutrosofica.html")
+
+@app.route('/estadisticasNeutrosofica', strict_slashes=False)
+def estadisticasNeutrosofica():
+    return render_template("/Neutrosofia/estadisticasNeutrosofica.html")
 
 # Make sure this we are executing this file
 if __name__ == '__main__':

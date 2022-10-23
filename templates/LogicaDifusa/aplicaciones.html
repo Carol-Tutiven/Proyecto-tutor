@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Lógica Difusa</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="LogicaDifusa">Lógica Difusa</a></li>
+        <li><a href="historiaLogica">Historia</a></li>
+        <li><a href="Importancia">Funcionalidad</a></li>
+        <li><a href="aplicaciones">Aplicaciones</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2 class="title-neutrosofia">APLICACIONES DE LA LÓGICA DÍFUSA</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <h1 class="title-neutrosofia">
+                ¿En qué se puede aplicar la lógica dífusa?
+              </h1>
+              <p class="parrafo-text">
+                Una de las disciplinas matemáticas con mayor número de
+                seguidores actualmente es la llamada lógica difusa o borrosa,
+                que es la lógica que utiliza expresiones que no son ni
+                totalmente ciertas ni completamente falsas, es decir, es la
+                lógica aplicada a conceptos que pueden tomar un valor cualquiera
+                de veracidad dentro de un conjunto de valores que oscilan entre
+                dos extremos, la verdad absoluta y la falsedad total.
+              </p>
+
+              <p class="parrafo-text">
+                Conviene recalcar que lo que es difuso, borroso, impreciso o
+                vago no es la lógica en sí, sino el objeto que estudia:
+                <br />expresa la falta de definición del concepto al que se
+                aplica.
+              </p>
+              <p class="parrafo-text">
+                La lógica difusa permite tratar información imprecisa, como
+                estatura media o temperatura baja, en términos de conjuntos
+                borrosos que se combinan en reglas para definir acciones:
+                <br />si la temperatura es alta entonces enfriar mucho.
+              </p>
+
+              <p class="parrafo-text">
+                De esta manera, los sistemas de control basados en lógica difusa
+                combinan variables de entrada, definidas en términos de
+                conjuntos difusos, por medio de grupos de reglas que producen
+                uno o varios valores de salida.
+              </p>
+              <img
+                src="/static/imagenes/inteligencia-artificial-algoritmos.jpg"
+                width=370px;
+                height=300px;
+                style=" margin-left: 154px; border-radius: 48px ; margin-top: 30px;"               
+              />
+              <p class="parrafo-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  {% endblock%}
+</main>

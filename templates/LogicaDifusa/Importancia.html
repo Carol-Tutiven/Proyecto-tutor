@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} {% block content %}
+
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Lógica Difusa</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="LogicaDifusa">Lógica Difusa</a></li>
+        <li><a href="historiaLogica">Historia</a></li>
+        <li><a href="Importancia">Funcionalidad</a></li>
+        <li><a href="aplicaciones">Aplicaciones</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2 class="title-neutrosofia">FUNCIONALIDAD DE LA LÓGICA DÍFUSA</h2>
+      <div id="recuadro3"></div>
+    </article>
+
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            <img src="imagenes/productos/celulares/A12.jpg" alt="" />
+            <div class="infoProducto">
+              <h1 class="title-neutrosofia">¿Para qué sirve la Fuzzy Logic?</h1>
+              <p class="parrafo-text">
+                Se trata de una disciplina que nos permite tratar información
+                imprecisa. Veamos un ejemplo. La temperatura se puede medir en
+                grados centígrados. Es decir, podemos decir que hace 16 grados y
+                medio, pero también la podemos medir de una forma no precisa.
+                Por ejemplo, como «hace frío», «hace un poco de frío» o «hace un
+                poco de calor». Dicho esto, tenemos que establecer qué valores
+                son los que abarcan frío, calor, etc.
+              </p>
+
+              <p class="parrafo-text">
+                Aquí es donde entra la fuzzy logic, ya que nos permite moderar
+                este tipo de información. Esta lógica parte de la teoría clásica
+                de conjuntos. Esta teoría dice que un elemento puede pertenecer
+                o no a un conjunto. Pero la fuzzy logic nos permite establecer
+                rangos de pertenencia más allá del 0 y 1.
+              </p>
+              <p class="parrafo-text">
+                Es decir, en vez de decir «esto es frío» o «esto es cálido»,
+                pues podemos decir: «esto es 0,5 unidades de frío» o «0,8
+                unidades de cálido». Esto es lo que nos permite moderar frases
+                del estilo «hace un poco de frío» o «eres alto».
+              </p>
+
+              <p class="parrafo-text">
+                La pertenencia de un elemento a un conjunto borroso se calcula
+                mediante su función de pertenencia, que es una función a trozos
+                que determina el grado de pertenencia en función de intervalos.
+                Otro de los elementos que conforman los conjuntos borrosos son
+                las particiones borrosas. También tenemos que definir el
+                conjunto de partición borrosa, que es un conjunto de conjuntos
+                borrosos. Concretamente, es un conjunto de todos los conjuntos
+                que se han definido para una determinada variable.
+              </p>
+              <img
+                src="/static/imagenes/importancia-log.webp"
+                width=370px;
+                height=300px;
+                style=" margin-left: 236px; border-radius: 48px ; margin-top: 30px;"               
+              />
+              <p class="parrafo-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  {% endblock%}
+</main>

@@ -1,21 +1,80 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
+<main class="main">
+  <!-- ASIDE DE CATALOGO -->
+  <aside clas>
+    <div id="categoria">
+      <h1>Lógica Difusa</h1>
+      <div id="recuadro2"></div>
+      <ul>
+        <li><a href="LogicaDifusa">Lógica Difusa</a></li>
+        <li><a href="historiaLogica">Historia</a></li>
+        <li><a href="Importancia">Funcionalidad</a></li>
+        <li><a href="aplicaciones">Aplicaciones</a></li>
+      </ul>
+    </div>
+  </aside>
+  <section id="articulosprincipales">
+    <article id="compra">
+      <h2 class="title-neutrosofia">LÓGICA DÍFUSA</h2>
+      <div id="recuadro3"></div>
+    </article>
 
-{% block content %}
+    <article id="productos">
+      <div id="celulares">
+        <div id="slider">
+          <div class="recuadro">
+            
+            <div class="infoProducto">
+              <p class="parrafo-text">
+                Fuzzy Logic es la lógica que utiliza expresiones que no son ni
+                completamente ciertas ni falsas. Es una lógica difusa.
+                Actualmente, es una de las disciplinas matemáticas con un mayor
+                número de seguidores.
+              </p>
 
-<!-- ASIDE DE CATALOGO -->
-<div id="categoria">
-    <h1>Lógica Difusa</h1>
-    <div id="recuadro2"></div>
-    <ul>
-        <li><a href="#slider">Celulares y Tablets</a></li>
-        <li><a href="motos.html">Motos</a></li>
-        <li><a href="computadoras.html">Computadoras</a></li>
-        <li><a href="cocinas.html">Cocinas</a></li>
-        <li><a href="televisores.html">Televisores</a></li>
-        <li><a href="impresoras.html">Impresoras</a></li>
-    </ul>
-</div>
+              <p class="parrafo-text">
+                La Fuzzy Logic se aplica a conceptos que pueden adquirir un
+                valor cualquiera de veracidad dentro de un conjunto de valores
+                que oscilan entre dos extremos:
+                <ol start="1">
+                    <li class="list-Redes">
+                        La verdad absoluta 
+                    </li>
+                    <li class="list-Redes">
+                        La falsedad total 
+                    </li>
+                  </ol>  
+              </p>
+              <p class="parrafo-text">
+                Es importante tener en cuenta que lo difuso no es la lógica en
+                sí, sino el objeto que se estudia. Esto se debe a la falta de
+                definición del concepto al que se aplica. La Fuzzy Logic nos
+                permite jugar con información que no es precisa. Por ejemplo,
+                «temperatura baja» o «estatura media», en términos de conjuntos
+                que no son claros.
+              </p>
 
-
+              <p class="parrafo-text">
+                Este tipo de lógica surge de la necesidad de utilizar en nuestra
+                vida diaria esos adjetivos del lenguaje natural con los cuales
+                estamos cualificando y, de esta manera, poder volcarlos o
+                cuantificarlos de alguna forma. Esta cuantificación de los
+                adjetivos será la base que vamos a intentar tratar mediante la
+                Fuzzy Logic.
+              </p>
+              <p class="parrafo-text"></p>
+              <img
+                src="/static/imagenes/logicaDifusa.png"
+                width=541px;
+                height=300px;
+                style=" margin-left: 154px; border-radius: 48px ; margin-top: 30px;"               
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
 {% endblock%}

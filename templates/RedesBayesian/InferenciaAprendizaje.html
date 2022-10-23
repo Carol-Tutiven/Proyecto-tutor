@@ -10,7 +10,7 @@
       <ul>
         <li><a href="RedesBayesianas">Definición</a></li>
         <li><a href="Historia">Historia</a></li>
-        <li><a href="#slider">Inferencia de aprendizaje</a></li>
+        <li><a href="InferenciaAprendizaje">Inferencia de aprendizaje</a></li>
         <li>
           <a href="ClasificadoresBayesianos">Clasificadores Bayesianos</a>
         </li>
@@ -20,7 +20,7 @@
 
   <section id="articulosprincipales">
     <article id="compra">
-      <h2>Inferencia de aprendizaje</h2>
+      <h2 class="title-neutrosofia">INFERENCIA DE APRENDIZAJE</h2>
       <div id="recuadro3"></div>
     </article>
 
@@ -30,8 +30,8 @@
           <div class="recuadro">
             <img src="imagenes/productos/celulares/A12.jpg" alt="" />
             <div class="infoProducto">
-              <h1>Deducción de variables no observadas</h1>
-              <p>
+              <h1 class="title-neutrosofia">Deducción de variables no observadas</h1>
+              <p class="parrafo-text">
                 Debido a que una red bayesiana es un modelo completo de las
                 variables y sus relaciones, se puede utilizar para responder a
                 las consultas de probabilidad acerca de ellos. Por ejemplo, la
@@ -41,7 +41,7 @@
                 cálculo de la distribución posterior de las variables dada la
                 evidencia que se llama inferencia probabilística.
               </p>
-              <p>
+              <p class="parrafo-text">
                 La posterior da un suficiente estadístico universal para
                 aplicaciones de detección, cuando se quiere elegir los valores
                 para la variable de un subconjunto que minimizan alguna función
@@ -50,7 +50,7 @@
                 como un mecanismo para aplicar automáticamente el teorema de
                 Bayes a problemas complejos.
               </p>
-              <p>
+              <p class="parrafo-text">
                 Los métodos más comunes de inferencia exactas son: eliminación
                 de variables, el cual elimina (mediante integración o suma) las
                 variables no observadas y no consultadas una por una mediante la
@@ -62,7 +62,7 @@
                 espacio-tiempo y realiza eficientemente la eliminación de
                 variables cuando se usa suficiente espacio.
               </p>
-              <p>
+              <p class="parrafo-text">
                 Todos estos métodos tienen una complejidad que es exponencial
                 con respecto al ancho del árbol. <br />
                 Los algoritmos de inferencia aproximada más comunes son muestreo
@@ -71,8 +71,8 @@
                 GBP (Generalized Belief Propagation), y los métodos
                 variacionales.
               </p>
-              <h1>Aprendizaje de Parámetros</h1>
-              <p>
+              <h1 class="title-neutrosofia">Aprendizaje de Parámetros</h1>
+              <p class="parrafo-text">
                 Para especificar completamente la red bayesiana y por lo tanto
                 representar plenamente a la distribución de probabilidad
                 conjunta , es necesario especificar para cada nodo X la
@@ -87,7 +87,7 @@
                 desconocidos y deben estimarse a partir de los datos, a veces
                 utilizando el enfoque de máxima probabilidad.
               </p>
-              <p>
+              <p class="parrafo-text">
                 La maximización directa de la probabilidad (o de la probabilidad
                 posterior) es a menudo compleja cuando hay variables no
                 observadas. Un método clásico de este problema es el algoritmo
@@ -107,9 +107,9 @@
                 son más comunes.
               </p>
 
-              <p></p>
-              <h1>Aprendizaje de Estructuras</h1>
-              <p>
+              <p class="parrafo-text"></p>
+              <h1 class="title-neutrosofia">Aprendizaje de Estructuras</h1>
+              <p class="parrafo-text">
                 En el caso más simple, una red bayesiana se especifica por un
                 experto y se utiliza entonces para realizar inferencia. En otras
                 aplicaciones, la tarea de definir la red es demasiado compleja
@@ -139,7 +139,7 @@
                   />
                 </li>
               </ol>
-              <p>
+              <p class="parrafo-text">
                 Tipo 1 y tipo 2 representan las mismas dependencias (X y Z son
                 independientes dada Y) y son, por tanto, indistinguibles. Tipo
                 3, sin embargo, puede ser identificado de forma única, ya que X
@@ -156,7 +156,7 @@
                 alternativo de aprendizaje estructural utiliza la optimización
                 basada en búsquedas.
               </p>
-              <p>
+              <p class="parrafo-text">
                 Se requiere una función de puntuación y una estrategia de
                 búsqueda. Una función de puntuación común es la probabilidad
                 posterior de la estructura dado los datos de entrenamiento. El
@@ -172,8 +172,14 @@
                 de padres candidatos a k nodos y exhaustivamente buscan en el
                 mismo.
               </p>
-              <p></p>
-              <p></p>
+              <img
+                src="/static/imagenes/sistema-difuso.png"
+                width=511px;
+                height=300px;
+                style=" margin-left: 149px; border-radius: 48px ; margin-top: 30px;"               
+              />
+              <p class="parrafo-text"></p>
+              <p class="parrafo-text"></p>
             </div>
           </div>
         </div>
