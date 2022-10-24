@@ -16,7 +16,7 @@
   display: block;
 }
 .bg-dark-preg {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
   display: block;
   margin-bottom: 0%;
 }
@@ -30,7 +30,7 @@
   align-self: center;
 }
 .navbar-brand-text:hover {
-  color: #e11010;
+  color: #0056b3;
   text-decoration: none;
 }
 .navegation {
@@ -57,7 +57,8 @@
 .nav-link-preg {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255) !important;
+  font-weight: 600;
   text-decoration: none;
   font-size: 15px;
 }
@@ -73,7 +74,7 @@
   text-decoration: none;
 }
 .nav-link-preg:hover {
-  background: cornflowerblue;
+  background: #030506;
   border-radius: 11px;
   color: white;
   font-weight: bold;
@@ -83,7 +84,11 @@
   color: #e9ecef !important;
   font-weight: bold;
 }
-
+.panel-heading {
+  color: #fff !important;
+  background-color: #16183a !important;
+  border-color: #ddd;
+}
 /* Neutrosofia */
 .title-neutrosofia {
   font-size: 24px;
@@ -125,11 +130,33 @@
   font-size: 18px;
 }
 .title-collapse:hover {
-  color: #1a579a !important;
+  color: #fff !important;
   text-decoration: none;
 }
 /* texto principal */
 
+.conocemas {
+  font-size: 24px;
+  padding: 28px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  color: #2f4774;
+  text-align: center;
+  font-family: fangsong;
+}
+.ps-principal-title-1 {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  color: #2f4774;
+  text-align: center;
+  font-family: fangsong;
+}
 .ps-principal-title {
   font-size: 24px;
   padding: 0;
@@ -150,6 +177,7 @@
 .jumbotron-acerca {
   width: 78%;
   margin-left: 181px;
+  padding-bottom: 40px;
 }
 
 .ps-secundary-title {
@@ -293,6 +321,7 @@ li {
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 35px;
 }
 
 /* content contact */
@@ -335,7 +364,7 @@ li {
 /* Title info */
 .title-info {
   font-family: emoji;
-  font-size: 27px;
+  font-size: 22px;
   padding: 18px;
   text-align: center;
   font-weight: bold;
@@ -374,7 +403,7 @@ li {
   align-self: center;
   height: 44px;
   color: #fff;
-  background-color: #343a40;
+  background-color: #12074e;
   border-color: #343a40;
   line-height: 26px;
 }
