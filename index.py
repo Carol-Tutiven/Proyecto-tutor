@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 # Creating simple Routes
 
-
 @app.route('/test')
 def test():
     return "Home Page"
@@ -18,11 +17,6 @@ def Neutrosofia_test():
 @app.route('/test/LogicaDifusa/')
 def LogicaDifusa_test():
     return "LogicaDifusa Page"
-
-
-@app.route('/test/RedesBayesianas/')
-def RedesBayesianas_test():
-    return "RedesBayesianas Page"
 
 
 @app.route('/test/info/')
@@ -110,11 +104,6 @@ def Neutrosofia():
 @app.route('/LogicaDifusa', strict_slashes=False)
 def LogicaDifusa():
     return render_template("LogicaDifusa.html")
-
-
-@app.route('/RedesBayesianas', strict_slashes=False)
-def RedesBayesianas():
-    return render_template("RedesBayesianas.html")
 
 
 @app.route('/info', strict_slashes=False)

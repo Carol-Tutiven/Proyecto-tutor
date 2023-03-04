@@ -30,7 +30,10 @@
     <div class="content-navegation">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark-preg">
         <div class="navegation">
-          <img src="/static/imagenes/log.jpg" style="width: 189px; height: 78px" />
+          <img
+            src="/static/imagenes/log.jpg"
+            style="width: 189px; height: 78px"
+          />
           <a class="navbar-brand-text" href="{{ url_for('home') }}"
             >TUTOR INTELIGENTE</a
           >
@@ -62,11 +65,6 @@
             <li class="nav-item-preg">
               <a class="nav-link-preg" href="{{ url_for('LogicaDifusa') }}"
                 >LÓGICA DIFUSA</a
-              >
-            </li>
-            <li class="nav-item-preg">
-              <a class="nav-link-preg" href="{{ url_for('RedesBayesianas') }}"
-                >REDES BAYASIANAS</a
               >
             </li>
             <li class="nav-item-preg">
@@ -355,153 +353,6 @@
                 computacionales diseñados para impartir instrucción y apoyar
                 inteligentemente los procesos de enseñanza-aprendizaje mediante
                 la interacción con el alumno.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <h2 class="text-frecuente">REDES BAYESIANA</h2>
-        <!-- <p>
-      <strong>Note:</strong> The <strong>data-parent</strong> attribute makes
-      sure that all collapsible elements under the specified parent will be
-      closed when one of the collapsible item is shown.
-    </p> -->
-        <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes"
-                  >¿Cómo se les conoce a las redes bayesianas?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes" class="panel-collapse collapse in">
-              <div class="panel-body">
-                Las redes bayesianas (también conocidas como redes causales
-                probabilísticas, redes causales, sistemas expertos bayesianos,
-                redes de creencia, sistemas expertos probabilísticas o diagramas
-                de influencia) son herramientas estadísticas que representan un
-                conjunto de incertidumbres asociadas sobre la base de las
-                relaciones.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes1"
-                  >¿Qué es una red bayesiana en la inteligencia artificial?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes1" class="panel-collapse collapse">
-              <div class="panel-body">
-                Una red bayesiana es un grafo dirigido acíclico que codifica
-                relaciones probabilísticas de dependencia e independencia
-                condicional y que actualiza el modelo con base en las
-                evi-dencias muestrales mediante la regla de Bayes.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes2"
-                  >¿Qué son los métodos bayesianos?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes2" class="panel-collapse collapse">
-              <div class="panel-body">
-                La inferencia bayesiana constituye un enfoque alternativo para
-                el análisis estadístico de datos que contrasta con los métodos
-                convencionales de inferencia, entre otras cosas, por la forma en
-                que asume y maneja la probabilidad.
-                <br />
-                Existen dos definiciones de la noción de probabilidad:
-                <br /><br />objetiva y subjetiva.
-              </div>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes3"
-                  >¿Qué es y para qué se usa la probabilidad bayesiana?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes3" class="panel-collapse collapse">
-              <div class="panel-body">
-                El teorema de Bayes parte de una situación en la que es posible
-                conocer las probabilidades de que ocurran una serie de sucesos
-                Ai. A esta se añade un suceso B cuya ocurrencia proporciona
-                cierta información, porque las probabilidades de ocurrencia de B
-                son distintas según el suceso Ai que haya ocurrido.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes4"
-                  >¿Dónde se pueden usar las redes bayesianas?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes4" class="panel-collapse collapse">
-              <div class="panel-body">
-                Por ejemplo, una red bayesiana se puede utilizar para calcular
-                la probabilidad de un paciente con una enfermedad concreta, con
-                la presencia o no de algunos síntomas y otros datos relevantes,
-                si las independencias probabilísticas entre síntomas y
-                enfermedad son verdaderas, tal y como se muestra en el gráfico.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a
-                  class="title-collapse"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseRedes5"
-                  >¿Cómo crear una red bayesiana?</a
-                >
-              </h4>
-            </div>
-            <div id="collapseRedes5" class="panel-collapse collapse">
-              <div class="panel-body">
-                ¿Cómo crear una red bayesiana? Una red bayesiana representa en
-                forma gráfica las dependencias e independencias en- tre
-                variables aleatorias, en particular las independencias
-                condicionales. Lo an- terior se representa con la siguiente
-                notación, para el caso de X independiente de Y dado Z:
-                Independencia en la distribución: P(X|Y,Z) = P(X|Z).
               </div>
             </div>
           </div>
