@@ -13,6 +13,9 @@ def test():
 def Neutrosofia_test():
     return "Neutrosofia Page"
 
+@app.route('/test/sistemas/')
+def sistemas_test():
+    return "sistemas Page"
 
 @app.route('/test/LogicaDifusa/')
 def LogicaDifusa_test():
@@ -100,6 +103,9 @@ def home():
 def Neutrosofia():
     return render_template("Neutrosofia.html")
 
+@app.route('/sistemas', strict_slashes=False)
+def sistemas():
+    return render_template("sistemas.html")
 
 @app.route('/LogicaDifusa', strict_slashes=False)
 def LogicaDifusa():
