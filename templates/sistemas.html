@@ -2,37 +2,103 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+<body onload="leerArchivo()">
+    <div>
+        <div class="lead" style=" background: gray;
+            padding-top: 35px;
+            padding-bottom: 35px;">
+            Prototipo de un tutor inteligente para el desarrollo de sistemas 
+            de razonamiento apróximado bajo incertidumbre en Python
+        </div>
+        <div class="lead" style="padding-top: 35px; padding-bottom: 35px;">
+            <div> Caso de estudio</div>   Muertes por COVID-19
+        </div>
+        <div> aqui NO va la tabla</div>
+        <div id="tabla"></div>    
+        </br></br></br></br>
+        <!-- aqui va el desarrollo  -->
+        <div id="tablares"></div><!-- tabla del dataSet-->
+    
+        </br></br></br></br>
+        <div style="text-align: -webkit-center;">
+            <a class="btn btn-dark" href="{{ url_for('sistemas') }}" role="button">Resultados</a>
+        </div>
+        <div>
+            <h4 style="text-align: -webkit-center; margin-top: 69px;
+            font-weight: 500;
+            font-family: fantasy;"> Visualización del manejo de los algoritmo</h4>
+        </div>
+        </br></br>
+        <div style="text-align: center;">
+            <a class="btn btn-dark" href="https://colab.research.google.com/drive/16W9rP5sWlXSupuF36mtSR9oNMckdGL7S#scrollTo=C74GP0t9gFXR" role="button">Algoritmo</a>
+        </div>
+        </br></br></br></br>
+    </div>
+    
+    
+    {% endblock%}
+    <script>
+        function leerArchivo(){
+            console.log("sddsdsds");
+            const archivo = null;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET','./DataSet/datasetlimpio.csv',true);
+            xhr.responseType = 'text';
+    
+            xhr.onload = () => {
+                if(xhr.status === 200){
+                    archivo = xhr.responseText;
+                }
+            }
+            
+             
+            if(archivo == null ){
+                console.log("No se encontro el archivo");
+            }
+            crearTabla(archivo);
+        }
+    
+        function crearTabla(data){
+            const todasFilas = data.split(/\r?\n|\r/);
+            let tabla = '<table>';
+    
+            for(let fila = 0 ; fila < todasFilas.length; fila++){
+                if(fila === 0){
+                    tabla += '<thead>';
+                    tabla += '<tr>';
+                }else{
+                    tabla += '<tr>';
+                }
+    
+                const celdasFila = todasFilas[fila].split(',');
+    
+                for(let rowCell = 0 ; rowCell < celdasFila.length ; rowCell++){
+    
+                    if(fila === 0){
+                        tabla += '<th>';
+                        tabla += celdasFila[rowCell];
+                        tabla += '</th>'
+                    }else{
+                        tabla += '<td>';
+                        tabla += celdasFila[rowCell];
+                        tabla += '</td>'
+                    }
+    
+                }
+    
+                if(fila === 0){
+                    tabla += '<tr>';
+                    tabla += '</thead>';
+                    tabla += '</tr>'
+                }else{
+                    tabla += '/tr';
+                }
+            }
+    
+            tabla += '</tbody>';
+            tabla += '</table>'
+            document.querySelector('#tablares').innerHTML = tabla;
+        }
+    </script>
+</body>
 <!-- ASIDE DE CATALOGO -->
-<div>
-    <div class="lead" style=" background: gray;
-    padding-top: 35px;
-    padding-bottom: 35px;">
-        Prototipo de un tutor inteligente para el desarrollo de sistemas 
-        de razonamiento apróximado bajo incertidumbre en Python
-    </div>
-    <div class="lead" style="padding-top: 35px; padding-bottom: 35px;">
-        <div> Caso de estudio</div>   Muertes por COVID-19
-    </div>
-    <div> aqui va la tabla</div>
-    <div id="tabla"></div>    
-</br></br></br></br>
-    <!-- aqui va el desarrollo  -->
-</br></br></br></br>
-<div style="text-align: -webkit-center;">
-    <a class="btn btn-dark" href="{{ url_for('sistemas') }}" role="button">Resultados</a>
-</div>
-<div>
-<h4 style="text-align: -webkit-center; margin-top: 69px;
-font-weight: 500;
-font-family: fantasy;"> Visualización del manejo de los algoritmo</h4>
-</div>
-</br></br>
-<div style="text-align: center;">
-    <a class="btn btn-dark" href="https://colab.research.google.com/drive/16W9rP5sWlXSupuF36mtSR9oNMckdGL7S#scrollTo=C74GP0t9gFXR" role="button">Algoritmo</a>
-</div>
-</br></br></br></br>
-</div>
-
-
-{% endblock%}
