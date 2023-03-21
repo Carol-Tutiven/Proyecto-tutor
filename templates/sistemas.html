@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 {% extends "layout.html" %}
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta  name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+</head>
 {% block content %}
-<body onload="leerArchivo()">
+<body onload="this.crearTabla2()">
+    
     <div>
         <div class="lead" style=" background: gray;
             padding-top: 35px;
@@ -13,11 +23,13 @@
         <div class="lead" style="padding-top: 35px; padding-bottom: 35px;">
             <div> Caso de estudio</div>   Muertes por COVID-19
         </div>
-        <div> aqui NO va la tabla</div>
+        
         <div id="tabla"></div>    
         </br></br></br></br>
         <!-- aqui va el desarrollo  -->
-        <div id="tablares"></div><!-- tabla del dataSet-->
+        
+        <table  id="tablares" class="table table-striped" style="width:100%"></table>
+        
     
         </br></br></br></br>
         <div style="text-align: -webkit-center;">
@@ -36,69 +48,38 @@
     </div>
     
     
-    {% endblock%}
+    
     <script>
-        function leerArchivo(){
-            console.log("sddsdsds");
-            const archivo = null;
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET','./DataSet/datasetlimpio.csv',true);
-            xhr.responseType = 'text';
-    
-            xhr.onload = () => {
-                if(xhr.status === 200){
-                    archivo = xhr.responseText;
+
+        $(document).ready(function () {
+            $('#tablares').DataTable();
+        });
+
+        async function crearTabla2(){
+            let table = document.getElementById("tablares");
+            table.innerHTML="";
+
+            const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQfMOpkOIWA9v69t618Ccnkf36aaUjVlg8edB-lVHyWQe84sO0YpckxbTXMugTEPsBa01C5e8SV52DN/pub?gid=498583076&single=true&output=csv');
+            const data = await response.text();
+            const rows = data.split(/\n/);
+
+            rows.forEach(row => {
+                const col = row.split(',');
+
+                let htmlrow = table.insertRow();
+
+                for(const [i,el] of col.entries()){
+                    let cell = htmlrow.insertCell();
+
+                    
+                        cell.innerHTML = el;
+                    
                 }
-            }
+            });
+
             
-             
-            if(archivo == null ){
-                console.log("No se encontro el archivo");
-            }
-            crearTabla(archivo);
-        }
-    
-        function crearTabla(data){
-            const todasFilas = data.split(/\r?\n|\r/);
-            let tabla = '<table>';
-    
-            for(let fila = 0 ; fila < todasFilas.length; fila++){
-                if(fila === 0){
-                    tabla += '<thead>';
-                    tabla += '<tr>';
-                }else{
-                    tabla += '<tr>';
-                }
-    
-                const celdasFila = todasFilas[fila].split(',');
-    
-                for(let rowCell = 0 ; rowCell < celdasFila.length ; rowCell++){
-    
-                    if(fila === 0){
-                        tabla += '<th>';
-                        tabla += celdasFila[rowCell];
-                        tabla += '</th>'
-                    }else{
-                        tabla += '<td>';
-                        tabla += celdasFila[rowCell];
-                        tabla += '</td>'
-                    }
-    
-                }
-    
-                if(fila === 0){
-                    tabla += '<tr>';
-                    tabla += '</thead>';
-                    tabla += '</tr>'
-                }else{
-                    tabla += '/tr';
-                }
-            }
-    
-            tabla += '</tbody>';
-            tabla += '</table>'
-            document.querySelector('#tablares').innerHTML = tabla;
         }
     </script>
+{% endblock%}
 </body>
 <!-- ASIDE DE CATALOGO -->
