@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<body onload="leerArchivo()">
+<body  onload="leerArchivo()">
     <div>
         <div class="lead" style=" background: gray;
             padding-top: 35px;
@@ -13,7 +13,27 @@
         <div class="lead" style="padding-top: 35px; padding-bottom: 35px;">
             <div> Caso de estudio</div>   Muertes por COVID-19
         </div>
-        <div> aqui NO va la tabla</div>
+        <div> aqui NO va la tabla
+
+            <div id="tabla"></div>
+            <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+            <script>
+            d3.open("templates\DataSet\datasetlimpio.csv", function(data) {
+            var parsedCSV = d3.csv.parseRows(data);
+            var container = d3.select("#tabla")
+            .append("table")
+            .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+            .selectAll("td")
+            .data(function(d) {return d;}).enter()
+            .append("td")
+            .open(function(d) {return d;});
+            });
+            </script>
+            
+
+        </div>
         <div id="tabla"></div>    
         </br></br></br></br>
         <!-- aqui va el desarrollo  -->
@@ -35,14 +55,14 @@
         </br></br></br></br>
     </div>
     
-    
-    {% endblock%}
     <script>
         function leerArchivo(){
             console.log("sddsdsds");
             const archivo = null;
             const xhr = new XMLHttpRequest();
-            xhr.open('GET','./DataSet/datasetlimpio.csv',true);
+            console.log("xhr", window)
+            // window.open('templates\DataSet\datasetlimpio.csv', true)
+            xhr.open('GET','templates\DataSet\datasetlimpio.csv',true);
             xhr.responseType = 'text';
     
             xhr.onload = () => {
@@ -53,7 +73,7 @@
             
              
             if(archivo == null ){
-                console.log("No se encontro el archivo");
+                console.log("No se encontro el archivo xd xd ");
             }
             crearTabla(archivo);
         }
@@ -99,6 +119,9 @@
             tabla += '</table>'
             document.querySelector('#tablares').innerHTML = tabla;
         }
+    
+   
     </script>
 </body>
+{% endblock%}
 <!-- ASIDE DE CATALOGO -->
