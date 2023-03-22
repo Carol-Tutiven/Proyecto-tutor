@@ -24,25 +24,38 @@
             <div> Caso de estudio</div>   Muertes por COVID-19
         </div>
         <div id="tabla"></div>    
-        </br></br></br></br>
-        <!-- aqui va el desarrollo  -->
-        
-        <table  id="tablares" class="table table-striped" style="width:100%"></table>
-        
-    
-        </br></br></br></br>
-        <div style="text-align: -webkit-center;">
-            <a class="btn btn-dark" href="{{ url_for('sistemas') }}" role="button">Resultados</a>
-        </div>
         <div>
             <h4 style="text-align: -webkit-center; margin-top: 69px;
             font-weight: 500;
             font-family: fantasy;"> Visualización del manejo de los algoritmo</h4>
         </div>
-        </br></br>
+        </br>
         <div style="text-align: center;">
             <a class="btn btn-dark" href="https://colab.research.google.com/drive/16W9rP5sWlXSupuF36mtSR9oNMckdGL7S#scrollTo=C74GP0t9gFXR" role="button">Algoritmo</a>
         </div>
+    </br></br>
+        <!-- aqui va el desarrollo  -->
+        <div><table  id="tablares" class="table table-striped" 
+        style="text-align: center;
+            margin-left: 179px; width: 56%"
+           ></table></div>
+        <nav aria-label="tablares">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link">Anterior</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Siguiente</a>
+              </li>
+            </ul>
+          </nav>
+        </br></br></br></br>
+        <!-- <div style="text-align: -webkit-center;">
+            <a class="btn btn-dark" href="{{ url_for('sistemas') }}" role="button">Resultados</a>
+        </div> -->
         </br></br></br></br>
     </div>
     
